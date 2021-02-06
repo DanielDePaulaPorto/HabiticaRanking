@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Habitica Dashboard</title>
+  <link rel="shortcut icon" sizes="48x48" href="https://habitica.com/static/icons/favicon.ico">
+  <link rel="shortcut icon" sizes="192x192" href="https://habitica.com/static/icons/favicon_192x192.png">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/habitica.js"></script>
+  <script src="js/dashboard.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div style="padding-bottom: 100px; border-color: #0E0;">
+      <center>
+        <br>
+        <h1 style="color: #FFFFFF;"><i class="fas fa-cogs"></i> Habitica Dashboard</h1>
+        <hr>
+        <br>
+
+        <div id="message"></div>
+
+        <div id="loading">
+          <img src="./img/loading2.gif" height="24" width="160">
+          <br>
+          <br>
+          Carregando...
+          <br>
+          <br>
+        </div>
+
+
+        <div id="challenge">
+          <br>
+          <div id="challengeName"></div>
+          <br>
+        </div>
+
+        <!-------->
+        <div id="dashboard"></div>
+        <hr>
+        <div id="createNewTask">
+          <br>
+          <p>
+            Create new task:
+            <br>
+            <select id="userSelect">
+              <option value="---">- - -</option>
+            </select>
+            <select id="taskTypeSelect">
+              <option value="---">- - -</option>
+              <option value="habit">Hábito</option>
+              <option value="daily">Diária</option>
+              <option value="todo">Afazer</option>
+            </select>
+            <input id="newTaskName" value="Nome da task">
+            <button id="createNewTaskBtn" onclick="createNewTask()">Enviar</button>
+          </p>
+          <span style="color:#FFFFFF">● ● ● ● ●</span>
+        </div>
+        <!-------->
+      </center>
+    </div>
+  </div>
+
+  <!--div id="bottom-background">
+    <div class="seamless_mountains_demo_repeat"></div>
+    <div class="midground_foreground_extended2"></div>
+    <span class="copyright">Habitica Ranking - Lapes - UFSCar 2019</span>
+  </div-->
+
+</body>
+
+</html>

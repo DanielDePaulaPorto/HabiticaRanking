@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Habitica Ranking</title>
+  <link rel="shortcut icon" sizes="48x48" href="https://habitica.com/static/icons/favicon.ico">
+  <link rel="shortcut icon" sizes="192x192" href="https://habitica.com/static/icons/favicon_192x192.png">
+  <link href="css/habitica.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/habitica.js"></script>
+  <script src="js/savedRanking.js"></script>
+</head>
+
+<body>
+  <div id="container" class="container">
+    <div class="header"></div>
+    <!----------->
+    <div class="content">
+      <div id="leaderBox" class="firstUser"></div>
+
+      <div id="loading">
+        <img src="./img/loading.gif" height="64" width="64">
+        <br>
+        <br>
+        <div id="progress">Carregando...</div>
+      </div>
+
+      <div id="message">Usuário não encontrado!</div>
+
+    </div>
+    <!----------->
+
+    <div id="ranking">
+      <div class="topList"></div>
+      <!----------->
+      <div class="contentList">
+        <div id="board" class="list">
+
+        </div>
+      </div>
+      <!----------->
+      <div class="bottonList"></div>
+    </div>
+    <!----------->
+    <div class="footer"></div>
+    <div id="GroupRanking"></div>
+  </div>
+  <div id="bottom-background">
+    <div class="seamless_mountains_demo_repeat"></div>
+    <div class="midground_foreground_extended2"></div>
+    <span class="copyright">Habitica Ranking - Lapes - UFSCar 2019</span>
+  </div>
+</body>
+
+</html>

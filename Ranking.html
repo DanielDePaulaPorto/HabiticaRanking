@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Habitica Ranking</title>
+  <link rel="shortcut icon" sizes="48x48" href="https://habitica.com/static/icons/favicon.ico">
+  <link rel="shortcut icon" sizes="192x192" href="https://habitica.com/static/icons/favicon_192x192.png">
+  <link href="css/habitica.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/habitica.js"></script>
+  <script src="js/ranking.js"></script>
+  <script src="js/html2canvas.min.js"></script>
+</head>
+
+<body>
+  <div id="container" class="container">
+    <div class="header"></div>
+    <!----------->
+    <div class="content">
+      <div id="login">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        E-mail:
+        <input id="email" size="50px" type="text" name="email" placeholder="Endereço de e-mail do Habitica"
+          onkeypress="emailEnter(event)">
+        <input type="button" value="Logar" onclick="buttonEnter()" class="btn btn-primary">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+      <div id="leaderBox" class="firstUser"></div>
+
+      <div id="loading">
+        <img src="./img/loading.gif" height="64" width="64">
+        <br>
+        <br>
+        <div id="progress">Carregando...</div>
+      </div>
+
+      <div id="message">Usuário não encontrado!</div>
+
+    </div>
+    <!----------->
+
+    <div id="ranking">
+      <div class="topList"></div>
+      <!----------->
+      <div class="contentList">
+        <div id="board" class="list">
+
+        </div>
+      </div>
+      <!----------->
+      <div class="bottonList"></div>
+    </div>
+    <!----------->
+    <div class="footer"></div>
+  </div>
+  <div id="bottom-background">
+    <div class="seamless_mountains_demo_repeat"></div>
+    <div class="midground_foreground_extended2"></div>
+    <span class="copyright" onclick="printBoard()">Habitica Ranking - Lapes - UFSCar 2019</span>
+    <span id="saveRankingButton" class="save" onclick="saveRanking()"><i class="far fa-save"></i></span>
+  </div>
+</body>
+
+</html>
